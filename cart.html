@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <meta name="description" content="This is the shopping DOM workshop">
+    <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
+    <script src="js/cart.js" async></script>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fab fa-sketch"></i> Better Work Space </a>
+        </div>
+        <div class="header-2">
+            <div id="menu" class="fas fa-bars"></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="#home">home</a></li>
+                    <li><a href="#arrival">arrival</a></li>
+                    <li><a href="#deal">deal</a></li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="/cart.html" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-user"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="#" class="logo"> <i class="fas fa-shopping-bag"></i> shopping </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique expedita molestiae distinctio facere beatae velit, maiores ullam molestias necessitatibus sapiente.</p>
+            </div>
+
+            <div class="box">
+                <h3>links</h3>
+                <a href="#">home</a>
+                <a href="#">arrival</a>
+                <a href="#">featured</a>
+                <a href="#">gallery</a>
+                <a href="#">deal</a>
+            </div>
+
+            <div class="box">
+                <h3>contact us</h3>
+                <p> <i class="fas fa-home"></i> mumbai, maharashtra, india - 400104
+                </p>
+                <p> <i class="fas fa-phone"></i> +910000000
+                </p>
+                <p> <i class="fas fa-globe"></i> xyz@yoursite.com
+                </p>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> created by <span>mr. web designer</span> | all rights reserved. </h1>
+
+    </section>
+
+</html>
