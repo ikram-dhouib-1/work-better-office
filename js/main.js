@@ -74,8 +74,8 @@ $(document).ready(function() {
         event.preventDefault();
         const id = event.target.getAttribute('data-id');
         const price = event.target.getAttribute('data-price') || 10;
-        const quantity = event.target.getAttribute('data-qty') || 1;
-        const image = event.target.getAttribute('data-img');
+        const quantity = parseInt(event.target.getAttribute('data-qty')) || 1;
+        const image = event.target.getAttribute('data-image');
 
         let products = [];
         if (localStorage.getItem('currentCart')) {
@@ -85,11 +85,40 @@ $(document).ready(function() {
         if (id) {
             var index = products.findIndex(elt => elt.productId == id)
             if (index > -1) {
-                products[1].qty += 1;
+                products[index].quantity += 1;
             } else {
                 products.push({ productId: id, image: image, price: price, quantity: quantity });
             }
         }
         localStorage.setItem('currentCart', JSON.stringify(products));
+    }
+
+
+    //wish list
+    var addToWishListButtons = document.querySelectorAll(".addToWishList");
+    for (var i = 0; i < addToWishListButtons.length; i++) {
+        addToWishListButtons[i].addEventListener('click', addProductToWishList)
+    }
+
+    function addProductToWishList(event) {
+        event.preventDefault();
+        const id = event.target.getAttribute('data-id');
+        const price = event.target.getAttribute('data-price') || 10;
+        const quantity = parseInt(event.target.getAttribute('data-qty')) || 1;
+        const image = event.target.getAttribute('data-image');
+
+        let wishlist = [];
+        if (localStorage.getItem('currentWishList')) {
+            wishlist = JSON.parse(localStorage.getItem('currentWishList'));
+        }
+        if (id) {
+            var index = wishlist.findIndex(elt => elt.productId == id)
+            if (index == -1) {
+                wishlist.push({ productId: id, image: image });
+            } else {
+                alert('Product is already added to you wishlist !')
+            }
+        }
+        localStorage.setItem('currentWishList', JSON.stringify(wishlist));
     }
 });

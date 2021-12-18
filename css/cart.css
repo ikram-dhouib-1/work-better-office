@@ -298,15 +298,6 @@ body {
     font-size: 1.2em;
 }
 
-.fa-heart {
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-.fa-heart-red {
-    color: red;
-}
-
 .cart-row:last-child {
     border-bottom: 1px solid black;
 }

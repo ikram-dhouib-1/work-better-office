@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Shopping Cart</title>
-    <meta name="description" content="This is the shopping DOM workshop">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Work Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
-    <script src="js/cart.js" async></script>
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -27,20 +26,21 @@
         </div>
     </header>
 
-    <section class="container content-section" id='cart'>
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ITEM</span>
-            <span class="cart-price cart-header cart-column">PRICE</span>
-            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    <section class="arrival" id="favoriteList">
+        <h1 class="heading"> <span>Favorit List </span> </h1>
+        <div class="box-container" id='favorit-List'>
+
         </div>
-        <div class="cart-items" id="cart-items">
-        </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$0</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+
+    <section class="newsletter">
+        <h1>newsletter</h1>
+        <p>get in touch for latest discounts and updates</p>
+        <form action="" class='contactUs'>
+            <input class='field-input' type="email" placeholder="enter your email">
+            <input type="submit" class="btn">
+        </form>
+
     </section>
     <section class="footer">
 
@@ -74,6 +74,9 @@
         <h1 class="credit"> created by <span>Better work space team</span> | all rights reserved. </h1>
 
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/wishList.js"></script>
+
 </body>
 
 </html>

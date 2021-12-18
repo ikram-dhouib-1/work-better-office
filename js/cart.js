@@ -5,19 +5,16 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    var myStorage = window.localStorage;
-
-
     let products = null;
     if (localStorage.getItem('currentCart')) {
         products = JSON.parse(localStorage.getItem('currentCart'));
     }
     if (products) {
         for (var pdt of products) {
-            addItemToCart(pdt.productId, pdt.price, pdt.image, pdt.qty)
+            addItemToCart(pdt.productId, pdt.price, pdt.image, pdt.quantity);
+            updateCartTotal();
         }
     }
-
 
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -62,19 +59,23 @@ function ready() {
         while (cartItems.hasChildNodes()) {
             cartItems.removeChild(cartItems.firstChild)
         }
+        localStorage.removeItem('currentCart')
         updateCartTotal()
     }
 
     function removeCartItem(event) {
-        var buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.remove()
-        updateCartTotal()
+        var buttonClicked = event.target;
+        const id = event.target.getAttribute('data-id');
+        removeProduct(id);
+        buttonClicked.parentElement.parentElement.remove();
+        updateCartTotal();
     }
 
     function plusItemClicked(event) {
         const id = event.target.getAttribute('data-field');
         if (id) {
-            document.getElementById(id).value++;
+            value = document.getElementById(id).value++;
+            updateItemQuantity(id, parseInt(value + 1))
         }
         updateCartTotal()
     }
@@ -84,8 +85,10 @@ function ready() {
         if (id) {
             value = document.getElementById(id).value;
             if (value > 1) {
-                document.getElementById(id).value--;
+                document.getElementById(id).value = value - 1;
+                updateItemQuantity(id, parseInt(value - 1))
             } else {
+                removeProduct(id)
                 event.target.parentElement.parentElement.parentElement.remove()
             }
         }
@@ -94,12 +97,41 @@ function ready() {
 
     function quantityChanged(event) {
         var input = event.target
+        var id = input.getAttribute('id')
         if (isNaN(input.value) || input.value <= 0) {
             input.value = 1
         }
+        updateItemQuantity(id, input.value)
         updateCartTotal()
     }
 
+
+
+    function updateItemQuantity(id, quantity) {
+        let products = null;
+        if (localStorage.getItem('currentCart')) {
+            products = JSON.parse(localStorage.getItem('currentCart'));
+        }
+        if (products) {
+            var index = products.findIndex(elt => elt.productId == id);
+            products[index].quantity = quantity;
+        }
+        localStorage.setItem("currentCart", JSON.stringify(products))
+
+    }
+
+    function removeProduct(id) {
+        let products = null;
+        if (localStorage.getItem('currentCart')) {
+            products = JSON.parse(localStorage.getItem('currentCart'));
+        }
+        if (products) {
+            var index = products.findIndex(elt => elt.productId == id);
+            products.splice(index, 1)
+        }
+        localStorage.setItem("currentCart", JSON.stringify(products))
+
+    }
 
     function addItemToCart(title, price, imageSrc, qty) {
         var cartRow = document.createElement('div')
@@ -126,7 +158,7 @@ function ready() {
         <input type="number" id="${title}" step="1" min="1" value="${qty}" name="quantity" class="cart-quantity-input" id="${title}">
         <input type="button" value="+" class="button-plus" data-field="${title}">
       </div>
-            <button class="btn btn-danger" type="button">REMOVE</button>
+            <button class="btn btn-danger" data-id="${title}" type="button">REMOVE</button>
         </div>`
         cartRow.innerHTML = cartRowContents;
         cartItems.append(cartRow);

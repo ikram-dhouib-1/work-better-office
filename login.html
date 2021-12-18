@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Shopping Cart</title>
-    <meta name="description" content="This is the shopping DOM workshop">
-    <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
-    <script src="js/cart.js" async></script>
-    <link rel="stylesheet" href="css/cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
 
+    <title>Login landing page</title>
 </head>
 
 <body>
-
     <header>
         <div class="header-1">
             <a href="#" class="logo"><i class="fab fa-sketch"></i> Better Work Space </a>
         </div>
         <div class="header-2">
+
             <div class="icons">
                 <a href="wishList.html" class="fas fa-heart"></a>
                 <a href="cart.html" class="fas fa-shopping-cart"></a>
@@ -26,23 +27,33 @@
             </div>
         </div>
     </header>
+    <div class='login-section' id="login">
+        <section class="login side">
+            <img src="./images/img.svg" alt="">
+        </section>
 
-    <section class="container content-section" id='cart'>
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ITEM</span>
-            <span class="cart-price cart-header cart-column">PRICE</span>
-            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-        </div>
-        <div class="cart-items" id="cart-items">
-        </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$0</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-    </section>
-    <section class="footer">
+        <section class='login'>
+            <div class="login-container">
+                <p class="title">Welcome back</p>
+                <div class="separator"></div>
+                <p class="welcome-message">Please, provide login credential to proceed and have access to all our services</p>
+
+                <form class="login-form">
+                    <div class="form-control">
+                        <input type="text" placeholder="Username">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" placeholder="Password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <button class="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <section class="footer" id="aboutUs">
 
         <div class="box-container">
 
@@ -74,6 +85,7 @@
         <h1 class="credit"> created by <span>Better work space team</span> | all rights reserved. </h1>
 
     </section>
+
 </body>
 
 </html>

@@ -7,6 +7,7 @@
     <title>Better Work Space</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,16 +21,18 @@
             <div id="menu" class="fas fa-bars"></div>
             <nav class="navbar">
                 <ul>
-                    <li><a class="active" href="#home">home</a></li>
-                    <li><a href="#arrival">arrival</a></li>
-                    <li><a href="#deal">deal</a></li>
+                    <li><a href="#desks">desks</a></li>
+                    <li><a href="#BookCases">book cases</a></li>
+                    <li><a href="#OfficeDecor">office decorations</a></li>
+                    <li><a href="#deal">best deals</a></li>
                 </ul>
             </nav>
 
             <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
+                <a href="wishList.html" class="fas fa-heart"></a>
                 <a href="cart.html" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-user"></a>
+                <a href="index.html" class="fas fa-home"></a>
+                <a href="login.html" class="fas fa-user"></a>
             </div>
         </div>
     </header>
@@ -63,8 +66,9 @@
 
         </div>
     </section>
-    <section class="arrival" id="arrival">
-        <h1 class="heading"> <span>new arrivals</span> </h1>
+
+    <section class="arrival" id="desks">
+        <h1 class="heading"> <span>Desks </span> </h1>
         <div class="box-container">
             <div class="box">
                 <div class="image">
@@ -73,9 +77,8 @@
                 <div class="info">
                     <h3>Loft desk</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 300 DT <span>600 DT/-</span> </strong>
                         <div class="stars">
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -84,9 +87,8 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <button href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-id="product1" data-price='2'></button>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/loft.png" data-id='loft desk'></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-id='loft desk' data-image="images/loft.png" data-qty=1 data-price=300></a>
                 </div>
             </div>
 
@@ -97,7 +99,7 @@
                 <div class="info">
                     <h3>student desk</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 400 DT/- <span>550 DT/-</span> </strong>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -108,9 +110,8 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart"></a>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas fa-heart addToWishList" data-image="images/Student.jpg" data-id="student desk"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/Student.jpg" data-qty=1 data-id="student desk" data-price=400></a>
                 </div>
             </div>
 
@@ -121,7 +122,7 @@
                 <div class="info">
                     <h3>gamer desk</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 590 DT/- <span>725 DT/-</span> </strong>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -132,11 +133,19 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart"></a>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/gamer.jpg" data-id="gamer desk"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/gamer.jpg" data-qty=1 data-id="gamer desk" data-price=590></a>
                 </div>
             </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="arrival" id="BookCases">
+        <h1 class="heading"> <span>Book Cases </span> </h1>
+        <div class="box-container">
 
             <div class="box">
                 <div class="image">
@@ -145,7 +154,7 @@
                 <div class="info">
                     <h3>book case 1</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 250 DT/- <span>300 DT/-</span> </strong>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -156,9 +165,8 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart"></a>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book.jpg" data-id="Book Case 1"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book.jpg" data-qty=1 data-id="Book Case 1" data-price=250></a>
                 </div>
             </div>
 
@@ -169,7 +177,7 @@
                 <div class="info">
                     <h3>book case 2</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 240 DT/- <span>300 DT/-</span> </strong>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -180,9 +188,8 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart"></a>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book2.jpg" data-id="Book Case 2"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book2.jpg" data-qty=1 data-id="Book Case 2" data-price=240></a>
                 </div>
             </div>
             <div class="box">
@@ -192,7 +199,7 @@
                 <div class="info">
                     <h3>book case 1</h3>
                     <div class="subInfo">
-                        <strong class="price"> ₹1000/- <span>₹1500/-</span> </strong>
+                        <strong class="price"> 310 DT/- <span>360 DT/-</span> </strong>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -203,24 +210,92 @@
                     </div>
                 </div>
                 <div class="overlay">
-                    <a href="#" style="--i:1;" class="fas fa-heart"></a>
-                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart"></a>
-                    <a href="#" style="--i:3;" class="fas fa-search"></a>
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book3.jpg" data-id="Book Case 3"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book3.jpg" data-qty=1 data-id="Book Case 3" data-price=310></a>
                 </div>
             </div>
         </div>
+    </section>
+    <section class="arrival" id="OfficeDecor">
+        <h1 class="heading"> <span>Office decorations </span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/book.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>book case 1</h3>
+                    <div class="subInfo">
+                        <strong class="price"> 250 DT/- <span>300 DT/-</span> </strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book.jpg" data-qty=1 data-id="Book Case 1"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book.jpg" data-qty=1 data-id="Book Case 1" data-price=250></a>
+                </div>
+            </div>
 
+            <div class="box">
+                <div class="image">
+                    <img src="images/book2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>book case 2</h3>
+                    <div class="subInfo">
+                        <strong class="price"> 240 DT/- <span>300 DT/-</span> </strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book2.jpg" data-qty=1></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book2.jpg" data-qty=1 data-id="Book Case 2" data-price=240></a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/book3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>book case 1</h3>
+                    <div class="subInfo">
+                        <strong class="price"> 310 DT/- <span>360 DT/-</span> </strong>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <a href="#" style="--i:1;" class="fas addToWishList fa-heart" data-image="images/book3.jpg" data-id="Book Case 3"></a>
+                    <a href="#" style="--i:2;" class="fas addToCart fa-shopping-cart" data-image="images/book3.jpg" data-qty=1 data-id="Book Case 3" data-price=310></a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="deal" id="deal">
-
         <h1 class="heading"> <span> best deals </span> </h1>
-
         <div class="box-container">
 
             <div class="box">
                 <img src="images/deal1.jpg" alt="">
                 <div class="content">
-                    <h3>latest laptop</h3>
+                    <h3>latest desks</h3>
                     <p>upto 25% off on first purchase</p>
                     <a href="#"><button class="btn">explore</button></a>
                 </div>
@@ -229,7 +304,7 @@
             <div class="box">
                 <img src="images/deal2.jpg" alt="">
                 <div class="content">
-                    <h3>new headphone</h3>
+                    <h3>new desk lampes</h3>
                     <p>upto 25% off on first purchase</p>
                     <a href="#"><button class="btn">explore</button></a>
                 </div>
@@ -268,8 +343,8 @@
     <section class="newsletter">
         <h1>newsletter</h1>
         <p>get in touch for latest discounts and updates</p>
-        <form action="">
-            <input type="email" placeholder="enter your email">
+        <form action="" class='contactUs'>
+            <input class='field-input' type="email" placeholder="enter your email">
             <input type="submit" class="btn">
         </form>
 
@@ -279,17 +354,16 @@
         <div class="box-container">
 
             <div class="box">
-                <a href="#" class="logo"> <i class="fas fa-shopping-bag"></i> shopping </a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique expedita molestiae distinctio facere beatae velit, maiores ullam molestias necessitatibus sapiente.</p>
+                <a href="#" class="logo"> <i class="fab fa-sketch"></i> Better Work Space </a>
+                <p>To Better your office space -To work better at home .You get here the lastest office furnitures :desks ,chairs ,decorations book cases .</p>
             </div>
 
             <div class="box">
                 <h3>links</h3>
-                <a href="#">home</a>
-                <a href="#">arrival</a>
-                <a href="#">featured</a>
-                <a href="#">gallery</a>
-                <a href="#">deal</a>
+                <a href="home.html">Home</a>
+                <a href="cart.html">Cart</a>
+                <a href="login.html">Login</a>
+                <a href="wishList.html">Favorite list</a>
             </div>
 
             <div class="box">
