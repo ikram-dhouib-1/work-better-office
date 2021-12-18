@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0613aa179d.js" crossorigin="anonymous"></script>
-
     <title>Login landing page</title>
 </head>
 
@@ -34,21 +33,29 @@
 
         <section class='login'>
             <div class="login-container">
-                <p class="title">Welcome back</p>
+                <p class="title" id='log'>Welcome back</p>
                 <div class="separator"></div>
-                <p class="welcome-message">Please, provide login credential to proceed and have access to all our services</p>
+                <p class="welcome-message" id='message-log'>Please, provide login credential to proceed and have access to all our services</p>
 
-                <form class="login-form">
+                <form id="login-form" class="login-form">
                     <div class="form-control">
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" required id="name" name="name">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="form-control">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                         <i class="fas fa-lock"></i>
                     </div>
-
+                    <label for="psw">Password</label>
                     <button class="submit">Login</button>
+
+                    <div id="message">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
                 </form>
             </div>
         </section>
@@ -85,7 +92,7 @@
         <h1 class="credit"> created by <span>Better work space team</span> | all rights reserved. </h1>
 
     </section>
-
+    <script src="js/login.js"></script>
 </body>
 
 </html>

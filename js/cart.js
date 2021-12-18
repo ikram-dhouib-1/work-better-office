@@ -158,7 +158,7 @@ function ready() {
         <input type="number" id="${title}" step="1" min="1" value="${qty}" name="quantity" class="cart-quantity-input" id="${title}">
         <input type="button" value="+" class="button-plus" data-field="${title}">
       </div>
-            <button class="btn btn-danger" data-id="${title}" type="button">REMOVE</button>
+            <button class="btn btn-danger fas fa-trash" data-id="${title}" type="button"></button>
         </div>`
         cartRow.innerHTML = cartRowContents;
         cartItems.append(cartRow);

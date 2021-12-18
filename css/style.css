@@ -313,8 +313,12 @@ header .header-2.header-active {
     transform: translateY(0rem);
 }
 
+.arrival .box-container .box .overlay a.fa-heart:hover {
+    color: red;
+}
+
 .arrival .box-container .box .overlay a:hover {
-    color: var(--blue);
+    color: green;
 }
 
 .feature {
